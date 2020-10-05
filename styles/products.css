@@ -1,0 +1,16 @@
+
+.products {
+    width: 200px;
+    text-align: center;
+
+}
+
+.products > img {
+    width: 100px;
+}
+
+.category {
+    font-style: oblique;
+    font-size: 8px;
+    
+}
