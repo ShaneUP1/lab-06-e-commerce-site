@@ -1,11 +1,13 @@
 
-.products {
+#products {
     width: 200px;
     text-align: center;
+    align-content: center;
+    justify-content: center;
 
 }
 
-.products > img {
+li > img {
     width: 100px;
 }
 
