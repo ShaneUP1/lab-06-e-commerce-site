@@ -1,9 +1,48 @@
 
+
+
+.main-section {
+    text-align: center;
+    align-items: center;
+}
+
+#product-display {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+   
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    ;
+    gap: 15px;
+    justify-content: space-around;
+    width: 200px;
+
+}
+li {
+    padding: 15px 5px 5px 10px;
+    border: black 1px solid;
+    width: 200px;
+    justify-content: space-between;
+}
+
+button {
+    margin-bottom: 3px;
+}
+h1 {
+    font-size: 36px;
+    padding-bottom: 0px;
+}
 #products {
     width: 200px;
     text-align: center;
     align-content: center;
     justify-content: center;
+   
 
 }
 

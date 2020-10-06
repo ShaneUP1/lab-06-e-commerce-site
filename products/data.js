@@ -11,7 +11,7 @@ export const products = [
     {
         id: 'dumbbells',
         name: 'Dumbbells',
-        image: './assets/dumbbell.png',
+        image: 'dumbbell.png',
         description: 'Dumbbells are essential to add-in resistance training.',
         price: 35.00,
         category: 'resistance-training',

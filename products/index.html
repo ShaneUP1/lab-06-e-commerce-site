@@ -8,41 +8,27 @@
     <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../styles/reset.css">
     <link rel="stylesheet" href="../styles/style.css">
-    <link rel="stylesheet" href="../styles/home.css">
-    <link rel="stylesheet" href="products.css">
+    <link rel="stylesheet" href="./products.css">
     <title>Products Page</title>
 </head>
 
 <body>
     <header>
-        <div class="gutter-right logo">
-            <img src="assets/big-logo.png"/>
-        </div>
+        
     </header>
     <main>
         <section class="main-section">
-            Welcome to the Products Page!
-            <br>Here you can find the few equipment items you'll need to get a good workout at home.
-            
+           <h1>Welcome to the Products Page!</h1> 
+           <p>Here you can find the few equipment items you'll need to get a good workout at home.</p>
+        </section> 
+    </main>  
+    <div id="product-display">
+            <ul id="products"></ul>
+    </div>
+    
+    
 
-            <ul id="products">
-                <li id="dumbbells">
-                    <h2 class="name">Dumbbells</h2>
-                    <img src="../assets/dumbbell.png">
-                    <p class="description">Dumbbells are essential to add-in resistance training.</p>
-                    <p class="price">53.00</p>
-                    <p class="category">category: Resistance-training</p>
-                    <button value="dumbbells">Throw it in the basket!</button>
-                </li>
-        
-            </ul>
-        </section>
-    </main>
-    <footer>
-        <div class="copy gutter-right">&copy; 2020 Alchemy Code Lab</div>
-    </footer>
-
-    <script type="module" src="../app.js"></script>
+    <script type="module" src="product.js"></script>
 </body>
 
 </html>
