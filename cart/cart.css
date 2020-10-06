@@ -11,6 +11,11 @@ table th, table td {
     border: 1px black solid;
 }
 
+table th {
+    font-weight:bolder;
+    text-align: center;
+}
+
 button {
     margin-top: 20px;
 }
