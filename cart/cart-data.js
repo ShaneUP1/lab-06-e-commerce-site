@@ -1,14 +1,14 @@
 
 export const cart = [{
-    id: 'foamroller',
+    name: 'Foamroller',
     quantity: 2
 }, {
-    id: 'jump-rope',
+    name: 'Jump Rope',
     quantity: 2
 }, {
-    id: 'gymnastics-rings',
+    name: 'Gymnastics Rings',
     quantity: 1
 }, {
-    id: 'exercise-mat',
+    name: 'Exercise Mat',
     quantity: 1
 }];
