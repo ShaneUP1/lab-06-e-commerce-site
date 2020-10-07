@@ -19,3 +19,11 @@ for (let i = 0; i < cart.length; i++) {
 const total = calcOrderTotal(cart, products);
 const totalCell = document.querySelector('.total');
 totalCell.textContent = `Total: $${total}`;
+
+button.addEventListener('click', () => {
+    const inYourCart = JSON.stringify(cart, true, 2);
+    alert (inYourCart);
+
+    localStorage.clear();
+    window.location.href = '/';
+});
