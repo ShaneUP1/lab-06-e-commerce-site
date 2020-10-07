@@ -1,5 +1,21 @@
 
-import { products as sourceOfTruth } from '../products/product_data.js'
+import { products as sourceOfTruth } from '../products/product_data.js';
+
+
+
+export function calcOrderTotal(cartArray, sourceOfTruth){
+    let total = 0;
+
+    for (let i = 0; i < cartArray.length; i++) {
+        const item = cartArray[i];
+        console.log(item);
+        const equip = findById(sourceOfTruth, item.id);
+        const subTotal = calcLineItem(item.quantity, equip.price);
+        total += subTotal;
+    }
+    return total;
+}
+
 
 export function renderLineItem(cartItem){
     const tr = document.createElement('tr');
