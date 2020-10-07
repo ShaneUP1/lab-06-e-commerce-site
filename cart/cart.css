@@ -1,0 +1,31 @@
+
+table {
+    border-collapse: collapse;
+    border: 1px black solid;
+  
+    
+}
+
+ th, td {
+    text-align: right;
+    padding: 10px;
+    border: 1px black solid;
+    
+}
+
+#shopping-cart {
+    width: 500px;
+}
+tr {
+    width: 100%;
+}
+
+table th {
+    font-weight:bolder;
+    text-align: center;
+    /* width: 100%; */
+}
+
+button {
+    margin-top: 20px;
+}
