@@ -20,19 +20,26 @@
         <section class="main-section">
            <h1>Your Shopping Cart</h1> 
            <table>
-            <tr>
-              <th>Name</th>
-              <th>Price</th>
-              <th>Quantity</th>
-              <th>Subtotal</th>
-            </tr>
-            <tr>
-              <td>Foamroller</td>
-              <td>32.99</td>
-              <td>2</td>
-              <td>65.98</td>
-            </tr>
-          </table>
+             <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Price</th>
+                  <th>Quantity</th>
+                  <th>Subtotal</th>
+                </tr>
+             </thead>
+
+             <tbody>
+
+             </tbody>
+             <tfoot>
+               <tr>
+                 <td class="unstyle" colspan="2"></td>
+                 <td class="total unstyle" colspan="2">Total</td>
+               </tr>
+             </tfoot>
+           </table>
+            <tr id="shopping-cart"></tr>
           <button>Place Your Order</button>
         </section> 
     </main>  
@@ -40,7 +47,7 @@
     
     
 
-    <script type="module" src="cart.js"></script>
+    <script type="module" src="shopping-cart.js"></script>
 </body>
 
 </html>
