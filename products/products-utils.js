@@ -23,7 +23,7 @@ export function renderProducts(product){
     description.textContent = product.description;
 
     price.classList.add('price');
-    price.textContent = `${product.price.toFixed(2)}`;
+    price.textContent = `${product.price}`;
 
     // category.classList.add('category');
     // category.textContent = `category: ${product.category}`;

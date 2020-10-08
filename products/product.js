@@ -1,10 +1,12 @@
-import { localStorageProducts } from '../product-entry/admin-utils.js';
+import { PRODUCTS, getLocalStorageProducts } from '../product-entry/admin-utils.js';
 import { renderProducts } from './products-utils.js';
 
+const productsInLocalStorage = getLocalStorageProducts(PRODUCTS);
 const list = document.getElementById('products');
 
-for (let i = 0; i < localStorageProducts.length; i++) {
-    const product = localStorageProducts[i];
+console.log(productsInLocalStorage);
+for (let i = 0; i < productsInLocalStorage.length; i++) {
+    const product = productsInLocalStorage[i];
     const dom = renderProducts(product);
     list.appendChild(dom);
 }
