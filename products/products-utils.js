@@ -25,11 +25,11 @@ export function renderProducts(product){
     price.classList.add('price');
     price.textContent = `${product.price.toFixed(2)}`;
 
-    category.classList.add('category');
-    category.textContent = `category: ${product.category}`;
+    // category.classList.add('category');
+    // category.textContent = `category: ${product.category}`;
 
     addButton.value = product.id;
-    addButton.textContent = 'Throw it in the basket!';
+    addButton.textContent = 'Add it to the cart!';
     addButton.addEventListener('click', () => {
         
         const cart = getFromLocalStorage(CART) || [];
