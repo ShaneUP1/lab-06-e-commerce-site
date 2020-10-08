@@ -27,6 +27,7 @@ export function renderLineItem(cartItem){
     itemQuantity.textContent = cartItem.quantity;
 
     const productData = findById(sourceOfTruth, cartItem.id);
+    console.log(productData);
 
     itemName.textContent = productData.name;
     itemPrice.textContent = productData.price;
