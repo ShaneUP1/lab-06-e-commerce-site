@@ -1,6 +1,6 @@
 import { renderLineItem, calcOrderTotal } from './cart-utils.js';
 import { CART, getFromLocalStorage } from '../products/products-utils.js';
-import { products } from '../products/product_data.js';
+import { localStorageProducts } from '../product-entry/admin-utils.js';
 
 const shoppingList = document.querySelector('tbody');
 const button = document.querySelector('#place-order');
@@ -16,7 +16,7 @@ for (let i = 0; i < cart.length; i++) {
     shoppingList.appendChild(dom);
 }
 
-const total = calcOrderTotal(cart, products).toFixed(2);
+const total = calcOrderTotal(cart, localStorageProducts).toFixed(2);
 const totalCell = document.querySelector('.total');
 totalCell.textContent = `Total: $${total}`;
 
