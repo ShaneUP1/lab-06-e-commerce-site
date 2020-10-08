@@ -18,9 +18,9 @@
 ul {
     display: flex;
     flex-direction: row;
+    justify-content: space-evenly;
     /* flex-wrap: wrap; */
     gap: 15px;
-    justify-content: space-around;
     width: 100%;
 
 }
@@ -32,11 +32,12 @@ li {
 }
 
 .dropdown {
-    
+
 }
 
 button {
     margin-bottom: 3px;
+    ;
 }
 h1 {
     font-size: 36px;
