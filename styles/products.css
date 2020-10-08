@@ -4,6 +4,7 @@
 .main-section {
     text-align: center;
     align-items: center;
+    height: 100%;
 }
 
 #product-display {
@@ -17,16 +18,16 @@
 ul {
     display: flex;
     flex-direction: row;
-    ;
+    /* flex-wrap: wrap; */
     gap: 15px;
     justify-content: space-around;
-    width: 200px;
+    width: 100%;
 
 }
 li {
     padding: 15px 5px 5px 10px;
     border: black 1px solid;
-    width: 200px;
+    min-width: 150px;
     justify-content: space-between;
 }
 
