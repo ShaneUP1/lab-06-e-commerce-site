@@ -12,7 +12,6 @@ export function renderProducts(product){
     const category = document.createElement('p');
     const addButton = document.createElement('button');
     
-    
     li.id = product.id;
 
     name.classList.add('name');
