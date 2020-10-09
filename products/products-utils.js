@@ -69,7 +69,6 @@ export function getFromLocalStorage(key) {
     return JSON.parse(item);
 }
 export function setInLocalStorage(key, value) {
-        // remember, we need to stringify any values we want to set into local storage
     const stringyItem = JSON.stringify(value);
     
     localStorage.setItem(key, stringyItem);

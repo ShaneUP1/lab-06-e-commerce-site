@@ -2,9 +2,10 @@ import { PRODUCTS, getLocalStorageProducts } from '../product-entry/admin-utils.
 import { renderProducts } from './products-utils.js';
 
 const productsInLocalStorage = getLocalStorageProducts(PRODUCTS);
+console.log(productsInLocalStorage);
 const list = document.getElementById('products');
 
-console.log(productsInLocalStorage);
+
 for (let i = 0; i < productsInLocalStorage.length; i++) {
     const product = productsInLocalStorage[i];
     const dom = renderProducts(product);

@@ -1,14 +1,18 @@
 
-import { products as sourceOfTruth } from '../products/product_data.js';
+import { getLocalStorageProducts, PRODUCTS } from '../product-entry/admin-utils.js';
+// import { products as sourceOfTruth } from '../products/product_data.js';
 
 
+// const productArray = getLocalStorageProducts(PRODUCTS);
+const products = getLocalStorageProducts();
 
-export function calcOrderTotal(cartArray, sourceOfTruth){
+
+export function calcOrderTotal(cartArray, productArray){
     let total = 0;
 
     for (let i = 0; i < cartArray.length; i++) {
         const item = cartArray[i];
-        const equip = findById(sourceOfTruth, item.id);
+        const equip = findById(productArray, item.id);
         const subTotal = calcLineItem(item.quantity, equip.price);
         total += subTotal;
     }
@@ -16,7 +20,7 @@ export function calcOrderTotal(cartArray, sourceOfTruth){
 }
 
 
-export function renderLineItem(cartItem){
+export function renderLineItem(products, cartItem){
     const tr = document.createElement('tr');
     const itemName = document.createElement('td');
     const itemPrice = document.createElement('td');
@@ -25,8 +29,7 @@ export function renderLineItem(cartItem){
 
     itemQuantity.textContent = cartItem.quantity;
 
-    const productData = findById(sourceOfTruth, cartItem.id);
-    console.log(productData);
+    const productData = findById(products, cartItem.id);
 
     itemName.textContent = productData.name;
     itemPrice.textContent = productData.price;

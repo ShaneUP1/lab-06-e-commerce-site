@@ -3,15 +3,18 @@ import { products as hardCodedProducts } from '../products/product_data.js';
 
 export const PRODUCTS = 'PRODUCTS';
 
+
+
+
+
 export function addProduct(newProduct) {
-    const localStorageProducts = getLocalStorageProducts();
+    const localStorageProducts = getLocalStorageProducts(PRODUCTS);
 
     localStorageProducts.push(newProduct);
 
     const stringyLocalProducts = JSON.stringify(localStorageProducts);
     localStorage.setItem(PRODUCTS, stringyLocalProducts);
 }
-
 
 
 export function getLocalStorageProducts() {
@@ -24,5 +27,7 @@ export function getLocalStorageProducts() {
         localStorage.setItem(PRODUCTS, stringyProducts);
         localStorageProducts = hardCodedProducts;
     }
+    console.log(localStorageProducts);
     return localStorageProducts;
+    
 }
