@@ -3,6 +3,10 @@ import { products as hardCodedProducts } from '../products/product_data.js';
 
 export const PRODUCTS = 'PRODUCTS';
 
+
+
+
+
 export function addProduct(newProduct) {
     const localStorageProducts = getLocalStorageProducts();
 
@@ -24,5 +28,7 @@ export function getLocalStorageProducts() {
         localStorage.setItem(PRODUCTS, stringyProducts);
         localStorageProducts = hardCodedProducts;
     }
+    console.log(localStorageProducts);
     return localStorageProducts;
+    
 }
