@@ -8,14 +8,13 @@ export const PRODUCTS = 'PRODUCTS';
 
 
 export function addProduct(newProduct) {
-    const localStorageProducts = getLocalStorageProducts();
+    const localStorageProducts = getLocalStorageProducts(PRODUCTS);
 
     localStorageProducts.push(newProduct);
 
     const stringyLocalProducts = JSON.stringify(localStorageProducts);
     localStorage.setItem(PRODUCTS, stringyLocalProducts);
 }
-
 
 
 export function getLocalStorageProducts() {

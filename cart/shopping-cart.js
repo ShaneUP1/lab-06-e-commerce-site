@@ -2,6 +2,7 @@ import { renderLineItem, calcOrderTotal } from './cart-utils.js';
 import { CART, getFromLocalStorage } from '../products/products-utils.js';
 import { PRODUCTS, getLocalStorageProducts } from '../product-entry/admin-utils.js';
 
+const products = getLocalStorageProducts();
 const shoppingList = document.querySelector('tbody');
 const button = document.querySelector('#place-order');
 const cart = getFromLocalStorage(CART) || [];
@@ -12,7 +13,7 @@ if (cart.length === 0) {
 
 for (let i = 0; i < cart.length; i++) {
     const item = cart[i];
-    const dom = renderLineItem(item);
+    const dom = renderLineItem(products, item);
     shoppingList.appendChild(dom);
 }
 

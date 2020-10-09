@@ -3,7 +3,8 @@ import { getLocalStorageProducts, PRODUCTS } from '../product-entry/admin-utils.
 // import { products as sourceOfTruth } from '../products/product_data.js';
 
 
-const productArray = getLocalStorageProducts(PRODUCTS);
+// const productArray = getLocalStorageProducts(PRODUCTS);
+const products = getLocalStorageProducts();
 
 
 export function calcOrderTotal(cartArray, productArray){
@@ -19,7 +20,7 @@ export function calcOrderTotal(cartArray, productArray){
 }
 
 
-export function renderLineItem(cartItem){
+export function renderLineItem(products, cartItem){
     const tr = document.createElement('tr');
     const itemName = document.createElement('td');
     const itemPrice = document.createElement('td');
@@ -28,7 +29,7 @@ export function renderLineItem(cartItem){
 
     itemQuantity.textContent = cartItem.quantity;
 
-    const productData = findById(productArray, cartItem.id);
+    const productData = findById(products, cartItem.id);
 
     itemName.textContent = productData.name;
     itemPrice.textContent = productData.price;
