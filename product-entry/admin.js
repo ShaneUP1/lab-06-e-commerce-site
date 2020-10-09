@@ -23,4 +23,5 @@ form.addEventListener('submit', (e) => {
         category: category,
     };
     addProduct(newProduct);
+    form.reset();
 });
