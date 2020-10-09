@@ -8,7 +8,6 @@ export function calcOrderTotal(cartArray, sourceOfTruth){
 
     for (let i = 0; i < cartArray.length; i++) {
         const item = cartArray[i];
-        console.log(item);
         const equip = findById(sourceOfTruth, item.id);
         const subTotal = calcLineItem(item.quantity, equip.price);
         total += subTotal;
