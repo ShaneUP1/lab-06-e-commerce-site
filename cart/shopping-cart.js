@@ -28,5 +28,5 @@ button.addEventListener('click', () => {
     alert (inYourCart);
 
     localStorage.clear();
-    window.location.href = '/';
+    window.location.href = '../index.html';
 });
